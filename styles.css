@@ -1,0 +1,177 @@
+/* Your styles go here. */
+
+html body:last-child {
+    font-family: "helvetica";
+}
+
+.header {
+    grid-area: header;
+    background: #29ceb5;
+    color: #FfFfff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 20px 40px;
+    text-align: left;
+}
+
+.container {
+    height: 600px;
+    margin: 10px;
+    background: #d3d3d342;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .3fr .2fr .8fr .5fr;
+    grid-template-areas: "header header header" 
+    ". . ." 
+    "currencyContainer imageContainer sourceContainer";
+}
+
+.currencyContainer {
+    grid-area: currencyContainer;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 300px;
+    height: 100px;
+    box-shadow: 0px 1px 5px #888888;
+    border-radius: 11px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sourceContainer {
+    grid-area: sourceContainer;
+    justify-self: start;
+    align-self: center;
+}
+
+.currencyIcontainer {
+    padding-top: 30px;
+}
+
+.imageContainer {
+    grid-area: imageContainer;
+    align-self: center;
+    justify-self: center;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #29ceb5;
+    border-radius: 68px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.currencySign {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #423f3f42;
+}
+
+.currencyInput {
+    width: 84%;
+    border: none;
+    font-size: 30px;
+}
+
+.currencyInput:focus {
+    outline: none;
+    border-bottom: 3px solid #29ceb5;
+    border-color: #29ceb5;
+}
+.currencyInput[type="text"]:disabled {
+    background: white;
+    color: #423f3f42;
+}
+
+.selectBox {
+    position: relative;
+    display: inline-block;
+    margin: 22px 0 0;
+}
+
+.selectBox:after {
+    content: "▼";
+    position: absolute;
+    width: 37px;
+    color: #29ceb5;
+    font-weight: bold;
+    font-size: 12px;
+    right: -13px;
+    top: 19px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.selectBox:before {
+    content: "";
+    right: 2px;
+    top: 2px;
+    width: 37px;
+    height: 34px;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.selectBox select {
+    position: relative;
+    width: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #29ceb5;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    padding: 10px 9px;
+    margin: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 50px;
+}
+
+select option {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        height: 570px;
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr .2fr .5fr .5fr .5fr;
+        grid-template-areas: 
+        "header" 
+        "." 
+        "currencyContainer"
+        "imageContainer"
+        "sourceContainer";
+    }
+    .currencyContainer,.sourceContainer{
+        justify-self:center;
+    }
+    .header{
+        font-size: 20px;
+        padding: 40px 15px 40px;
+        text-align: center;
+    }
+    .imageContainer {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}

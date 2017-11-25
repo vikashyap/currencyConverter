@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stylight Frontend Developer Task</title>
+
+    <!-- Put your own styles into this file. -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Stylight Currency Converter</div>
+        <div class="currencyContainer">
+            <div class="currencyIcontainer"><span id="currencySign1" class="currencySign"></span>
+                <input type="text" id="textbox1" class="currencyInput" value="1" name="currency" />
+            </div>
+            <label class="selectBox">
+                <select id="selectDropBox1" class="selectCurrency" name='options'>
+                </select>
+            </label>
+        </div>
+        <div id="imageContainer" class="imageContainer">
+            <img src="assets/switch.svg" height="30px" width="30px" alt="">
+        </div>
+        <div class="currencyContainer sourceContainer">
+        <div class="currencyIcontainer"><span id="currencySign2" class="currencySign"></span>
+                <input disabled ="true" type="text" id="textbox2" class="currencyInput" value="1" name="currency" />
+            </div>
+        <label class="selectBox">
+                <select id="selectDropBox2" class="selectCurrency" name='options'>
+                </select>
+        </label>
+        </div>
+        </div>
+        <!-- Use the `axios` library for making Ajax requests. -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Put your own JavaScript into this file. -->
+        <script src="money.js"></script>
+        <script src="service.js"></script>
+        <script src="scripts.js"></script>
+</body>
+
+</html>
