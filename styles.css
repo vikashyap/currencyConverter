@@ -19,7 +19,7 @@ html body:last-child {
     margin: 10px;
     background: #d3d3d342;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr .7fr 1fr;
     grid-template-rows: .3fr .2fr .8fr .5fr;
     grid-template-areas: "header header header" 
     ". . ." 
